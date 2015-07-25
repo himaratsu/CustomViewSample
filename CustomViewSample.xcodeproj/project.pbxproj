@@ -13,6 +13,8 @@
 		201FD7611B62502000963F08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201FD7601B62502000963F08 /* Images.xcassets */; };
 		201FD7641B62502000963F08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201FD7621B62502000963F08 /* LaunchScreen.xib */; };
 		201FD7701B62502100963F08 /* CustomViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201FD76F1B62502100963F08 /* CustomViewSampleTests.swift */; };
+		201FD77B1B62509200963F08 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201FD77A1B62509200963F08 /* MyCustomView.swift */; };
+		201FD77D1B62509C00963F08 /* MyCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201FD77C1B62509C00963F08 /* MyCustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		201FD7691B62502100963F08 /* CustomViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201FD76E1B62502100963F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201FD76F1B62502100963F08 /* CustomViewSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewSampleTests.swift; sourceTree = "<group>"; };
+		201FD77A1B62509200963F08 /* MyCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
+		201FD77C1B62509C00963F08 /* MyCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		201FD7561B62502000963F08 /* CustomViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				201FD7791B62502C00963F08 /* CustomView */,
 				201FD7591B62502000963F08 /* AppDelegate.swift */,
 				201FD75B1B62502000963F08 /* ViewController.swift */,
 				201FD75D1B62502000963F08 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				201FD76E1B62502100963F08 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		201FD7791B62502C00963F08 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				201FD77A1B62509200963F08 /* MyCustomView.swift */,
+				201FD77C1B62509C00963F08 /* MyCustomView.xib */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				201FD75F1B62502000963F08 /* Main.storyboard in Resources */,
+				201FD77D1B62509C00963F08 /* MyCustomView.xib in Resources */,
 				201FD7641B62502000963F08 /* LaunchScreen.xib in Resources */,
 				201FD7611B62502000963F08 /* Images.xcassets in Resources */,
 			);
@@ -213,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				201FD75C1B62502000963F08 /* ViewController.swift in Sources */,
+				201FD77B1B62509200963F08 /* MyCustomView.swift in Sources */,
 				201FD75A1B62502000963F08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
