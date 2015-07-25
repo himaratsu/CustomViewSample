@@ -12,20 +12,9 @@
 		201FD75F1B62502000963F08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201FD75D1B62502000963F08 /* Main.storyboard */; };
 		201FD7611B62502000963F08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201FD7601B62502000963F08 /* Images.xcassets */; };
 		201FD7641B62502000963F08 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201FD7621B62502000963F08 /* LaunchScreen.xib */; };
-		201FD7701B62502100963F08 /* CustomViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201FD76F1B62502100963F08 /* CustomViewSampleTests.swift */; };
 		201FD77B1B62509200963F08 /* MyCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201FD77A1B62509200963F08 /* MyCustomView.swift */; };
 		201FD77D1B62509C00963F08 /* MyCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201FD77C1B62509C00963F08 /* MyCustomView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		201FD76A1B62502100963F08 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 201FD74C1B62502000963F08 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 201FD7531B62502000963F08;
-			remoteInfo = CustomViewSample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		201FD7541B62502000963F08 /* CustomViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,22 +24,12 @@
 		201FD75E1B62502000963F08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		201FD7601B62502000963F08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		201FD7631B62502000963F08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		201FD7691B62502100963F08 /* CustomViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		201FD76E1B62502100963F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		201FD76F1B62502100963F08 /* CustomViewSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewSampleTests.swift; sourceTree = "<group>"; };
 		201FD77A1B62509200963F08 /* MyCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomView.swift; sourceTree = "<group>"; };
 		201FD77C1B62509C00963F08 /* MyCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		201FD7511B62502000963F08 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		201FD7661B62502100963F08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				201FD7561B62502000963F08 /* CustomViewSample */,
-				201FD76C1B62502100963F08 /* CustomViewSampleTests */,
 				201FD7551B62502000963F08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				201FD7541B62502000963F08 /* CustomViewSample.app */,
-				201FD7691B62502100963F08 /* CustomViewSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,23 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				201FD7581B62502000963F08 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		201FD76C1B62502100963F08 /* CustomViewSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				201FD76F1B62502100963F08 /* CustomViewSampleTests.swift */,
-				201FD76D1B62502100963F08 /* Supporting Files */,
-			);
-			path = CustomViewSampleTests;
-			sourceTree = "<group>";
-		};
-		201FD76D1B62502100963F08 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				201FD76E1B62502100963F08 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,24 +106,6 @@
 			productReference = 201FD7541B62502000963F08 /* CustomViewSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		201FD7681B62502100963F08 /* CustomViewSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 201FD7761B62502100963F08 /* Build configuration list for PBXNativeTarget "CustomViewSampleTests" */;
-			buildPhases = (
-				201FD7651B62502100963F08 /* Sources */,
-				201FD7661B62502100963F08 /* Frameworks */,
-				201FD7671B62502100963F08 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				201FD76B1B62502100963F08 /* PBXTargetDependency */,
-			);
-			name = CustomViewSampleTests;
-			productName = CustomViewSampleTests;
-			productReference = 201FD7691B62502100963F08 /* CustomViewSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,10 +117,6 @@
 				TargetAttributes = {
 					201FD7531B62502000963F08 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					201FD7681B62502100963F08 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 201FD7531B62502000963F08;
 					};
 				};
 			};
@@ -196,7 +134,6 @@
 			projectRoot = "";
 			targets = (
 				201FD7531B62502000963F08 /* CustomViewSample */,
-				201FD7681B62502100963F08 /* CustomViewSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,13 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		201FD7671B62502100963F08 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -233,23 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		201FD7651B62502100963F08 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				201FD7701B62502100963F08 /* CustomViewSampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		201FD76B1B62502100963F08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 201FD7531B62502000963F08 /* CustomViewSample */;
-			targetProxy = 201FD76A1B62502100963F08 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		201FD75D1B62502000963F08 /* Main.storyboard */ = {
@@ -372,40 +286,6 @@
 			};
 			name = Release;
 		};
-		201FD7771B62502100963F08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CustomViewSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomViewSample.app/CustomViewSample";
-			};
-			name = Debug;
-		};
-		201FD7781B62502100963F08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CustomViewSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomViewSample.app/CustomViewSample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,14 +305,7 @@
 				201FD7751B62502100963F08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		201FD7761B62502100963F08 /* Build configuration list for PBXNativeTarget "CustomViewSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				201FD7771B62502100963F08 /* Debug */,
-				201FD7781B62502100963F08 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
