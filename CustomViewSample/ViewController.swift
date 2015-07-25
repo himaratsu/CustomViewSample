@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        customView.titleLabel.text = "Hello"
     }
 }
 

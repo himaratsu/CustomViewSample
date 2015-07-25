@@ -74,4 +74,14 @@ class MyCustomView: UIView {
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
     }
+    
+    @IBAction func okButtonTouched(sender: AnyObject) {
+        let appStoreUrl = "https://itunes.apple.com/app/id934444072?mt=8"
+        if let URL = NSURL(string: appStoreUrl) {
+            if UIApplication.sharedApplication().canOpenURL(URL) {
+                UIApplication.sharedApplication().openURL(URL)
+            }
+        }
+    }
+    
 }
