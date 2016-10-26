@@ -11,14 +11,14 @@ import UIKit
 @IBDesignable
 class MyCustomView: UIView {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak private var iconImageView: UIImageView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var okButton: UIButton!
 
     
-    @IBInspectable var borderColor: UIColor = UIColor.clearColor() {
+    @IBInspectable var borderColor: UIColor = .clear {
         didSet {
-            self.layer.borderColor = borderColor.CGColor
+            self.layer.borderColor = borderColor.cgColor
         }
     }
     
@@ -49,7 +49,7 @@ class MyCustomView: UIView {
     
     @IBInspectable var buttonTitle: String = "" {
         didSet {
-            okButton.setTitle(buttonTitle, forState: .Normal)
+            okButton.setTitle(buttonTitle, for: UIControlState())
         }
     }
     
@@ -63,23 +63,23 @@ class MyCustomView: UIView {
         comminInit()
     }
 
-    private func comminInit() {
-        let bundle = NSBundle(forClass: self.dynamicType)
+    fileprivate func comminInit() {
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "MyCustomView", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil).first as! UIView
+        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         addSubview(view)
         
         view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
     }
     
-    @IBAction func okButtonTouched(sender: AnyObject) {
+    @IBAction func okButtonTouched(_ sender: AnyObject) {
         let appStoreUrl = "https://itunes.apple.com/app/id934444072?mt=8"
-        if let URL = NSURL(string: appStoreUrl) {
-            if UIApplication.sharedApplication().canOpenURL(URL) {
-                UIApplication.sharedApplication().openURL(URL)
+        if let URL = URL(string: appStoreUrl) {
+            if UIApplication.shared.canOpenURL(URL) {
+                UIApplication.shared.openURL(URL)
             }
         }
     }
