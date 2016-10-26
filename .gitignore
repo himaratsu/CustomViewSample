@@ -1,0 +1,8 @@
+*.ipa
+*xcuserdata
+*.xcuserstate
+xcuserstate
+Pods/
+Podfile.lock
+*.zip
+build/*
