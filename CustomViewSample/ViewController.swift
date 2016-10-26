@@ -16,9 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // use from code
-//        let customView = MyCustomView(frame: CGRectMake(50, 100, 270, 200))
-//        customView.titleLabel.text = "Hello!"
-//        view.addSubview(customView)
+        let customView = MyCustomView(frame: CGRectMake(50, 100, 270, 200))
+        customView.titleLabel.text = "Hello!"
+        view.addSubview(customView)
     }
 }
 
