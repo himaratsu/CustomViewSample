@@ -11,9 +11,9 @@ import UIKit
 @IBDesignable
 class MyCustomView: UIView, XibInstantiatable {
 
-    @IBOutlet weak private var iconImageView: UIImageView!
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var okButton: UIButton!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var okButton: UIButton!
 
     
     @IBInspectable var borderColor: UIColor = .clear {
@@ -55,12 +55,12 @@ class MyCustomView: UIView, XibInstantiatable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        comminInit()
+        instantiate()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        comminInit()
+        instantiate()
     }
 
     fileprivate func comminInit() {
