@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class MyCustomView: UIView {
+class MyCustomView: UIView, XibInstantiatable {
 
     @IBOutlet weak private var iconImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
@@ -49,7 +49,7 @@ class MyCustomView: UIView {
     
     @IBInspectable var buttonTitle: String = "" {
         didSet {
-            okButton.setTitle(buttonTitle, for: UIControlState())
+            okButton.setTitle(buttonTitle, for: [.normal, .highlighted, .selected])
         }
     }
     
@@ -64,15 +64,7 @@ class MyCustomView: UIView {
     }
 
     fileprivate func comminInit() {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "MyCustomView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        addSubview(view)
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        let bindings = ["view": view]
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        instantiate()
     }
     
     @IBAction func okButtonTouched(_ sender: AnyObject) {
